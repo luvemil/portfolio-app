@@ -9,9 +9,11 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-app.get("/api/status", (req, res) => {
+app.get("/api/btcusd", (req, res) => {
   res.json({
-    status: "OK"
+    status: "OK",
+    data: [ 1,2,3],
+    last_price: 5789,
   });
   return;
 });
